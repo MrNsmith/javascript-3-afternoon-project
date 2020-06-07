@@ -10,20 +10,19 @@
 
 // Do not edit the code below.
 var carDetails = {
-  color: 'red',
-  make: 'toyota',
-  model: 'tacoma',
-  year: 1994
-}
+  color: "red",
+  make: "toyota",
+  model: "tacoma",
+  year: 1994,
+};
 // Do not edit the code above.
 
 /*
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
+const { color, make, model, year } = carDetails;
 
 //Code Here
-
-
 
 ////////// PROBLEM 2 //////////
 
@@ -33,15 +32,13 @@ var carDetails = {
   The property names are firstName, lastName, and title.
 */
 
-function greeting( obj ) {
+function greeting(obj) {
   //Code Here
-  
+  const { firstName, lastName, title } = obj;
   // Do not edit the code below.
-  return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
+  return "Hello, " + title + " " + firstName + " " + lastName + "!";
   // Do not edit the code above.
 }
-
-
 
 ////////// PROBLEM 3 //////////
 
@@ -52,10 +49,21 @@ function greeting( obj ) {
   Use object destructuring to save the property values to new variables.
   Sum up the values and return the total number.
 */
+let stateObj = {
+  utah: 1,
+  california: 2,
+  texas: 3,
+  arizona: 4,
+};
+
+function totalPopulation(obj) {
+  const { utah, california, texas, arizona } = obj;
+  let totalNum = utah + california + texas + arizona;
+  
+  return totalNum;
+}
 
 //Code Here
-
-
 
 ////////// PROBLEM 4 //////////
 
@@ -66,10 +74,20 @@ function greeting( obj ) {
   Use object destructuring to save the property values to new variables. 
   Push these new variables to an array and return the array. 
 */
+let foodInc = {
+  carb:'butter',
+  fat: "eggs",
+  protein:'flour'
+}
 
+function ingredients (obj){
+  const {carb, fat, protein} = obj;
+ let newArr =  []
+  newArr.push(carb, fat, protein)
+
+return newArr
+}
 //Code Here
-
-
 
 ////////// PROBLEM 5 //////////
 
@@ -84,11 +102,18 @@ function greeting( obj ) {
   The object properties will be named first, second, and third and their values will be numbers.
   Find the smallest number of the three and return that number.
 */
+ let largeObj = {
+    first: 3,
+    second: 2,
+    third: 13
+}
 
+ function largeNumbers ({first, second, third}) {
+   return Math.min(first, second, third)
+  
+ }
 //Code Here
-
-
-
+// console.log(largeNumbers)
 ////////// PROBLEM 6 //////////
 
 /*
@@ -97,6 +122,24 @@ function greeting( obj ) {
   Find the longest array and return that array.
 */
 
-//Code Here
+let lilGroup = {
+  a:[1,2,3,4,5],
+  b: [2,2,3,4],
+  c: [7,2,3]
+}
+function numberGroups ({a,b,c}){
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] < b.length){
+      
+      } const newGroup = a[i];
+    
+  } return newGroup;
+
+  console.log(newGroup)
+
+}
+
+
+
 
 
