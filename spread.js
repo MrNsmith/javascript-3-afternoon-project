@@ -20,7 +20,7 @@ let product = {
 // code here
 
 
-
+let productCopy = {...product}
 
 ////////// PROBLEM 2 //////////
 
@@ -29,7 +29,7 @@ let product = {
 let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
 // code here
-
+let colorsCopy = {...colors}
 
 
 
@@ -38,11 +38,12 @@ let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 /* Here we have an array with 3 numbers, and a function that takes in 3 numbers as arguments.  Invoke addNums, and use the spread operator to pass in the numbers from the numbers array; and store the value to a variable named result */
 
 let numbers = [4, 6, 10];
-
+let newArr = {...numbers}
 function addNums(num1, num2, num3) {
   return num1 + num2 + num3;
 }
 
+let result = addNums(newArr[0],newArr[1],newArr[2]) 
 // code here
 
 
@@ -52,5 +53,10 @@ function addNums(num1, num2, num3) {
 
 let arr1 = ['dog', 'chameleon', 'monkey'];
 let arr2 = ['bear', 'tiger', 'liger'];
+newArr1 = arr1.concat(arr2) 
+
+let combinedArrays = newArr1
+
 
 // code here
+console.log(combinedArrays)

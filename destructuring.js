@@ -128,14 +128,13 @@ let lilGroup = {
   c: [7,2,3]
 }
 function numberGroups ({a,b,c}){
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] < b.length){
-      
-      } const newGroup = a[i];
-    
-  } return newGroup;
-
-  console.log(newGroup)
+  if(a.length > b.length && a.length > c.length){
+    return a 
+  }else if(b.length > c.length){
+    return b
+  }else {
+    return c
+  }
 
 }
 

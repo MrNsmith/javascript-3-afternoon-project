@@ -184,10 +184,10 @@ for(let key in deleteTheBigNumbers){
 
 function startsWithK(obj){
   for(let key in obj){
-    if(key.includes('k')){
+    if(key[0]=== 'k'){
       delete obj[key]
     }
-  }
+  }return obj
 }
 //Code Here
 
@@ -205,12 +205,13 @@ function startsWithK(obj){
 */
 function hiddenTreasure(obj){
   for(let key in obj){
-    if(key.includes('treasure')){
+    if(obj[key].includes('treasure') === false){
       delete obj[key]
 
     }
 
-  }return obj
+  }
+  return obj
 }
 //Code Here
 

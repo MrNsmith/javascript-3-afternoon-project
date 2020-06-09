@@ -114,7 +114,7 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 */
 
 let orderTotals = orders.map(function(price){
-return price.price + price.tax 
+return price.price *  (price.tax + 1)
 })
 // Code here
 console.log(orderTotals)
@@ -137,8 +137,13 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 let bobsTotal = purchases.reduce(function(acc, owner){
-  return acc + owner.price
-})
+  
+  if (owner.owner === 'Bob'){
+    return acc += owner.price
+  }else {
+    return acc
+  }
+},0)
 
 
 console.log(bobsTotal)
